@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     // App configurations
     meta: {
-      title: 'Baktapur',
+      title: 'Bhaktapur',
       environment: 'dev',
 
       dist: 'dist',
