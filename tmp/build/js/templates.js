@@ -137,44 +137,60 @@ function program3(depth0,data) {
   
 });
 
+Ember.TEMPLATES["project/index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  
+
+
+  data.buffer.push("project");
+  
+});
+
 Ember.TEMPLATES["projects"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', stack1, hashTypes, hashContexts, escapeExpression=this.escapeExpression, self=this;
+  var buffer = '', stack1, hashTypes, hashContexts, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1, hashContexts, hashTypes;
-  data.buffer.push("\n\n          <div class=\"col-lg-4\">\n            <div class=\"thumbnail\">\n              <img ");
+  var buffer = '', stack1, stack2, hashContexts, hashTypes, options;
+  data.buffer.push("\n\n      <div class=\"col-lg-4\">\n        <div class=\"thumbnail\">\n          <img ");
   hashContexts = {'src': depth0};
   hashTypes = {'src': "STRING"};
   data.buffer.push(escapeExpression(helpers.bindAttr.call(depth0, {hash:{
     'src': ("project.img")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("/>\n              <div class=\"caption\">\n                <h3>\n                  ");
+  data.buffer.push("/>\n          <div class=\"caption\">\n            <h3>\n              ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "project.title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n                  ");
+  data.buffer.push("\n              ");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers['if'].call(depth0, "project.isFunded", {hash:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n                  ");
+  data.buffer.push("\n              ");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers['if'].call(depth0, "project.isNew", {hash:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n                  ");
+  data.buffer.push("\n              ");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers['if'].call(depth0, "project.isNearDeadline", {hash:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n                </h3>\n                <p>\n                  ");
+  data.buffer.push("\n            </h3>\n            <p>\n              ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "project.description", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n                </p>\n                <p>\n                  <!-- { {#linkTo 'project/:id' project}} -->\n                  <div class=\"btn btn-primary\">Fund</div>\n                  <!-- { {/linkTo}} -->\n                </p>\n              </div>\n            </div>\n          </div>\n\n    ");
+  data.buffer.push("\n            </p>\n            <p>\n              ");
+  hashTypes = {};
+  hashContexts = {};
+  options = {hash:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0,depth0],types:["STRING","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "project.index", "project", options) : helperMissing.call(depth0, "linkTo", "project.index", "project", options));
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("\n            </p>\n          </div>\n        </div>\n      </div>\n\n    ");
   return buffer;
   }
 function program2(depth0,data) {
@@ -193,6 +209,12 @@ function program6(depth0,data) {
   
   
   data.buffer.push("<span class=\"label label-warning\">Deadline approaching!</span>");
+  }
+
+function program8(depth0,data) {
+  
+  
+  data.buffer.push("\n              <div class=\"btn btn-primary\">Fund</div>\n              ");
   }
 
   data.buffer.push("\n<h3>Active Projects</h3>\n\n<div class=\"container\">\n  <div class=\"row\">\n\n    ");

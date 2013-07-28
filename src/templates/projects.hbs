@@ -6,27 +6,27 @@
 
     {{#each project in controller.content}}
 
-          <div class="col-lg-4">
-            <div class="thumbnail">
-              <img {{bindAttr src="project.img"}}/>
-              <div class="caption">
-                <h3>
-                  {{project.title}}
-                  {{#if project.isFunded}}<span class="label label-success">Funded!</span>{{/if}}
-                  {{#if project.isNew}}<span class="label label-info">New!</span>{{/if}}
-                  {{#if project.isNearDeadline}}<span class="label label-warning">Deadline approaching!</span>{{/if}}
-                </h3>
-                <p>
-                  {{project.description}}
-                </p>
-                <p>
-                  <!-- { {#linkTo 'project/:id' project}} -->
-                  <div class="btn btn-primary">Fund</div>
-                  <!-- { {/linkTo}} -->
-                </p>
-              </div>
-            </div>
+      <div class="col-lg-4">
+        <div class="thumbnail">
+          <img {{bindAttr src="project.img"}}/>
+          <div class="caption">
+            <h3>
+              {{project.title}}
+              {{#if project.isFunded}}<span class="label label-success">Funded!</span>{{/if}}
+              {{#if project.isNew}}<span class="label label-info">New!</span>{{/if}}
+              {{#if project.isNearDeadline}}<span class="label label-warning">Deadline approaching!</span>{{/if}}
+            </h3>
+            <p>
+              {{project.description}}
+            </p>
+            <p>
+              {{#linkTo 'project.index' project}}
+              <div class="btn btn-primary">Fund</div>
+              {{/linkTo}}
+            </p>
           </div>
+        </div>
+      </div>
 
     {{/each}}
   </div>
