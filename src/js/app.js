@@ -1,6 +1,7 @@
-//= require router
+//= require ./routes/router
 //= require_tree ./lib
 //= require_tree ./helpers
+//= require ./store
 //= require_tree ./models
 //= require_tree ./controllers
 //= require_tree ./views
