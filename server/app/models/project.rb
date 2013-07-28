@@ -1,4 +1,4 @@
 class Project < ActiveRecord::Base
   belongs_to :org
-  validates :title
+  validates :title, presence: true
 end
