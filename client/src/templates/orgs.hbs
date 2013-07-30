@@ -1,0 +1,29 @@
+
+<h3>Active Organizations</h3>
+
+<div class="container">
+  <div class="row">
+
+    {{#each org in controller.content}}
+
+      <div class="col-lg-4">
+        <div class="thumbnail">
+          <img {{bindAttr src="project.img"}}/>
+          <div class="caption">
+            <h2>
+              {{#linkTo 'org.index' org}}
+                {{org.title}}
+                <span class="label label-success">{{org.projects.length}} active projects</span>
+              {{/linkTo}}
+            </h2>
+            <p>
+              {{org.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+
+</div>

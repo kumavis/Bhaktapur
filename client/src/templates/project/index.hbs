@@ -1,1 +1,25 @@
-project
+
+<div class="col-lg-4">
+  <div class="thumbnail">
+    <img {{bindAttr src="content.img"}}/>
+    <div class="caption">
+      <h2>
+        {{content.title}}
+        {{#if content.isFunded}}<span class="label label-success">Funded!</span>{{/if}}
+        {{#if content.isNew}}<span class="label label-info">New!</span>{{/if}}
+        {{#if content.isNearDeadline}}<span class="label label-warning">Deadline approaching!</span>{{/if}}
+      </h2>
+      <h4>
+        by {{#linkTo 'org.index' content.org}}{{content.org.title}}{{/linkTo}}
+      </h4>
+      <p>
+        {{content.description}}
+      </p>
+      <p>
+        {{#linkTo 'content.index' content}}
+          <div class="btn btn-default">Fund</div>
+        {{/linkTo}}
+      </p>
+    </div>
+  </div>
+</div>
