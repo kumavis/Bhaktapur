@@ -1,6 +1,6 @@
 {
   "name": "Bhaktapur",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "repo",
   "scripts": {
     "test": "grunt test"
@@ -19,7 +19,6 @@
     "grunt-karma": "~0.4.4",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-gatekeeper": "git://gh.apple.com/md/grunt-gatekeeper.git#master",
     "glob": "~3.2.1",
     "underscore": "~1.4.4",
     "async": "~0.2.9",

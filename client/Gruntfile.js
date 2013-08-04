@@ -175,16 +175,6 @@ module.exports = function(grunt) {
       }
     },
 
-    gatekeeper: {
-      dev: {
-        api: {
-          config: 'config/dev/api.gatekeeper.json',
-          noCSRF: true,
-        },
-      },
-    },
-    
-
     // Optimizations
     uglify: {
       app: {
@@ -355,7 +345,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-consolidate');
   // Delivery servers
   grunt.loadNpmTasks('grunt-chauffeur');
-  grunt.loadNpmTasks('grunt-gatekeeper');
   // Optimizations
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
